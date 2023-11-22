@@ -12,6 +12,10 @@
       background-color: #222831;
     }
 
+    .foregroundColor {
+      color: #222831;
+    }
+
     .Heroes {
       background-color: #393E46;
 
@@ -25,13 +29,34 @@
     }
 
     .primButtons {
-      background-color: #00ADB5;
+      --bs-yellow: #ffc107;
     }
+
+    .FAQaccordian{
+      background-color: #00ADB5;
+      border: none;
+    }
+
+    .accordianWhite{
+      background-color: #EEEEEE;
+      color: #222831;
+    }
+
+    .accordianWhite:not(.collapsed)
+    {
+      background-color: #EEEEEE;
+      color: #222831;
+    }
+
+    
+
+
+
   </style>
 
 </head>
 
-<body>
+<body style="background-color: #00ADB5;">
 
   <section class="NavBar">
     <header class="d-flex flex-wrap justify-content-center py-3  border-bottom">
@@ -45,7 +70,7 @@
       <ul class="nav nav-pills">
         <li class="nav-item"><a href="./index.html" class="nav-link" aria-current="page">Home</a></li>
         <li class="nav-item"><a href="./pricing.html" class="nav-link">Pricing</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+        <li class="nav-item"><a href="./about.html" class="nav-link">About</a></li>
       </ul>
     </header>
 
@@ -73,7 +98,7 @@
     </div>
   </section>
 
-  <section class="Features">
+  <section class="Features" style="background-color: #00ADB5;">
     <div class="container px-4 py-5" id="hanging-icons">
       <h2 class="pb-2 border-bottom">Features</h2>
       <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
@@ -128,8 +153,8 @@
         </div>
         <div class="col d-flex align-items-start">
           <div
-            class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
-            <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" fill="currentColor"
+            class="icon-square text-body-emphasis  d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="1.6em" height="1.6em" fill="currentColor"
               class="bi bi-window-plus" viewBox="0 0 16 16">
               <path
                 d="M2.5 5a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1ZM4 5a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1Zm2-.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0Z" />
@@ -140,6 +165,7 @@
             </svg>
           </div>
           <div>
+
             <h3 class="fs-2 text-body-emphasis">Streamlined Updates</h3>
             <p>Future-proof your security with seamless updates and enhancements as a service.</p>
 
@@ -188,15 +214,22 @@
 
     <h2 class="pb-2 border-bottom container my-4">Frequently Asked Questions</h2>
 
-    <div class="accordion container" id="accordionExample">
-      <div class="accordion-item">
-        <h2 class="accordion-header">
-          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+
+
+
+      <!-- First Accordian-->
+    
+    <div class="accordion container " >
+
+      <div class="accordion-item FAQaccordian" >
+
+        <h2 class="accordion-header" >
+          <button class="accordion-button accordianWhite"  type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
             aria-expanded="true" aria-controls="collapseOne">
             How does Guardian Shield's real-time monitoring work?
           </button>
         </h2>
-        <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+        <div id="collapseOne" class="accordion-collapse collapse collapse" data-bs-parent="#accordionExample">
           <div class="accordion-body">
 
             <strong>Answer:</strong>
@@ -207,14 +240,20 @@
           </div>
         </div>
       </div>
+
+
+ <!-- Second Accordian-->
+
+    
+
       <div class="accordion-item">
-        <h2 class="accordion-header">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+        <h2 class="accordion-header FAQaccordian">
+          <button class="accordion-button collapsed accordianWhite " type="button" data-bs-toggle="collapse"
             data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
             What sets Guardian Shield's ethical hacking service apart from other security services?
           </button>
         </h2>
-        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+        <div id="collapseTwo" class="accordion-collapse collapse " data-bs-parent="#accordionExample">
           <div class="accordion-body">
             <strong>Answer: </strong> Our ethical hacking service involves expert penetration testing by skilled
             professionals who pinpoint weaknesses in your code. Unlike standard services, our approach offers tailored
@@ -222,9 +261,12 @@
           </div>
         </div>
       </div>
+
+
+       <!-- Third Accordian-->
       <div class="accordion-item">
-        <h2 class="accordion-header">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+        <h2 class="accordion-header FAQaccordian">
+          <button class="accordion-button collapsed accordianWhite" type="button" data-bs-toggle="collapse"
             data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
             Can Guardian Shield's AI and data analytics predict future cyber attacks effectively?
           </button>
@@ -243,27 +285,45 @@
   </section>
 
 
-  <section class="footer">
-    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-      <p class="col-md-4 mb-0 text-body-secondary">© 2023 GuardianShield Inc. </p>
+  <section class="footer" style="background-color: #EEEEEE;">
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 mt-5 border-top">
+      <p class="col-md-4 mb-0  foregroundColor">© 2023 GuardianShield Inc. </p>
+      <?xml version="1.0" standalone="no"?>
 
-      <a href="/"
-        class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
-        <svg class="bi me-2" width="40" height="32">
-          <use xlink:href="#bootstrap"></use>
+
+      <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+
+
+      <a href="/index.html">
+        <?xml version="1.0" standalone="no"?>
+        <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+        <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="30.000000pt" height="30.000000pt"
+          viewBox="0 0 259.000000 286.000000" preserveAspectRatio="xMidYMid meet">
+
+          <g transform="translate(0.000000,286.000000) scale(0.100000,-0.100000)" fill="#222831" stroke="none">
+            <path
+              d="M240 2495 l0 -155 75 0 75 0 0 75 0 75 890 0 890 0 0 -75 0 -75 70 0 70 0 0 155 0 155 -1035 0 -1035 0 0 -155z" />
+            <path d="M230 2160 l0 -80 1045 0 1045 0 0 80 0 80 -1045 0 -1045 0 0 -80z" />
+            <path d="M240 1730 l0 -240 23 0 c45 1 110 18 118 31 5 8 9 112 9 232 l0 217 -75 0 -75 0 0 -240z" />
+            <path
+              d="M645 1818 c3 -84 7 -232 9 -328 6 -229 14 -260 89 -373 69 -104 280 -322 390 -402 l67 -49 0 -126 c0 -93 -4 -131 -14 -146 -14 -18 -16 -18 -63 15 -213 149 -480 398 -564 526 -51 76 -113 196 -135 259 -17 46 -9 56 41 56 43 0 55 16 54 69 -1 68 -12 96 -35 94 -110 -11 -212 -27 -226 -34 -43 -23 -4 -208 76 -367 109 -215 310 -438 587 -648 109 -82 249 -175 313 -205 l42 -21 62 31 c195 99 497 338 663 527 150 170 257 347 294 489 19 73 20 178 2 193 -13 11 -154 32 -213 32 -31 0 -32 -1 -43 -61 -14 -80 -4 -99 49 -99 21 0 42 -5 45 -10 10 -17 -33 -132 -77 -206 -91 -154 -266 -342 -462 -498 -125 -100 -226 -170 -233 -162 -4 3 -9 68 -11 144 l-4 137 93 75 c120 96 273 247 333 330 27 36 68 104 92 152 l44 88 0 335 0 335 -75 0 -75 0 0 -310 0 -311 -26 -52 c-44 -86 -103 -168 -183 -251 -80 -83 -258 -236 -274 -236 -33 0 -291 244 -372 352 -99 131 -95 112 -95 483 l0 325 -85 0 -84 0 4 -152z" />
+            <path d="M2170 1735 l0 -235 39 0 c21 0 53 -3 70 -6 l31 -6 0 241 0 241 -70 0 -70 0 0 -235z" />
+            <path
+              d="M1243 1820 c-52 -12 -83 -38 -105 -87 -25 -57 -20 -109 16 -164 l27 -40 -21 -67 c-11 -37 -23 -75 -26 -84 -5 -17 6 -18 135 -18 78 0 142 4 146 10 3 5 -3 42 -13 83 l-19 74 29 61 c25 50 29 69 23 102 -15 87 -107 150 -192 130z" />
+          </g>
         </svg>
+
       </a>
 
       <ul class="nav col-md-4 justify-content-end">
-        <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Home</a></li>
-        <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Features</a></li>
-        <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Pricing</a></li>
-        <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">FAQs</a></li>
-        <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">About</a></li>
+        <li class="nav-item foregroundColor"><a href="#" class="nav-link px-2 foregroundColor">Home</a></li>
+        <li class="nav-item "><a href="#" class="nav-link px-2 foregroundColor">Features</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 foregroundColor">Pricing</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 foregroundColor">FAQs</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 foregroundColor">About</a></li>
       </ul>
     </footer>
   </section>
-
 
 
 
